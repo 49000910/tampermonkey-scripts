@@ -1,0 +1,15 @@
+{
+ "name": "SN编码自动校验（无面板版，鼠标悬浮白底信息卡）-v2.7.18.user.js",
+ "chunk_size": 16384,
+ "method": {
+  "compress": "zlib",
+  "encode": "base64",
+  "obfuscation": "xor_123"
+ },
+ "chunks": [
+  "chunks/part_0000.bin",
+  "chunks/part_0001.bin"
+ ],
+ "sha256": "3139ac7a7718ee6da20622d18ed9dee2a377dfde1ad0007906a38dccbd481908",
+ "srcSize": 83716
+}
