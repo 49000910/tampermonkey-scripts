@@ -1,0 +1,14 @@
+{
+ "name": "SN编码规则兜底前台版-v1.8.user.js",
+ "chunk_size": 16384,
+ "method": {
+  "compress": "zlib",
+  "encode": "base64",
+  "obfuscation": "xor_123"
+ },
+ "chunks": [
+  "chunks/part_0000.bin"
+ ],
+ "sha256": "b4e94ebd92eff4cd58d629b3c8091d78824a5a2ccfba35f1768d1941385cd334",
+ "srcSize": 42553
+}
