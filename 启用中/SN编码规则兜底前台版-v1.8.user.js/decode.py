@@ -10,11 +10,12 @@ def unpack(pack_dir, out_dir):
     blob = b""
     n = len(meta["chunks"])
     for i, c in enumerate(meta["chunks"], 1):
-        blob += base64.b64decode(open(os.path.join(pack_dir, c), "rb").read())
+        blob += open(os.path.join(pack_dir, c), "rb").read()
         if i % 20 == 0 or i == n:
             print("chunk %d/%d" % (i, n), end="\r")
+    blob = base64.b64decode(blob)
     blob = bytes(b ^ XOR_KEY for b in blob)
-    data = zlib.decompress(base64.b64decode(blob))
+    data = zlib.decompress(blob)
     exp = hashlib.sha256(data).hexdigest()
     if exp != meta.get("sha256", exp):
         print("SHA256 MISMATCH!"); return 1
